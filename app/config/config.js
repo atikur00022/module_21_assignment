@@ -1,5 +1,8 @@
 export const PORT=8000
-export const DATABASE='mongodb+srv://ecommerce:WrOYTLnHD90ifkBP@cluster0.r13r8.mongodb.net/plainB?retryWrites=true&w=majority&appName=Cluster0'
+export const IMAGE_PATH="http://localhost:8000"
+
+export  const DEFAULT_IMAGE =`${IMAGE_PATH}/uploads/avatar.png`
+export const DATABASE='mongodb+srv://assignment:xyAWZTstToaKUDbp@cluster0.r13r8.mongodb.net/assignment?retryWrites=true&w=majority&appName=Cluster0'
 export const JWT_KEY='ABC12341241234'
 export const JWT_EXPIRE_TIME=30*24*60*60
 
@@ -25,6 +28,3 @@ export const FAIL_URL = ""
 export const CANCEL_URL = ""
 export const INIT_URL = ""
 
-// ecommerce
-// WrOYTLnHD90ifkBP
-// plainB

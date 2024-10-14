@@ -1,39 +1,48 @@
+import {
+    DeleteSingleFileService,
+    LoginService, ReadFileService,
+    ReadProfileService,
+    RegistrationService, UpdateProfileService,
+    UploadSingleImageService
+} from "../service/UserServices.js";
+
+// Registration
+export const Registration = async (req, res) => {
+    const result = await RegistrationService(req);
+    res.json(result);
+}
+
+// Login
 export const Login = async (req, res) => {
-    try {
-        res.status(200).json({status: 'success', message: 'User Login'});
-    }catch(err) {
-        res.status(500).json({status: 'error', message: err.message});
-    }
+    const result = await LoginService(req, res);
+    res.json(result);
 }
 
-export const VerifyLogin = async (req, res) => {
-    try {
-        res.status(200).json({status: 'success', message: 'User Verify Login'});
-    }catch(err) {
-        res.status(500).json({status: 'error', message: err.message});
-    }
+// Read Profile
+export const ReadProfile = async (req, res) => {
+    const result = await ReadProfileService(req);
+    res.json(result);
 }
 
-export const CreateUserProfile = async (req, res) => {
-    try {
-        res.status(200).json({status: 'success', message: 'User profle crated successfully'});
-    }catch(err) {
-        res.status(500).json({status: 'error', message: err.message});
-    }
+export const UpdateProfile = async (req, res) => {
+    const result = await UpdateProfileService(req);
+    res.json(result);
 }
 
-export const ReadUserProfile = async (req, res) => {
-    try {
-        res.status(200).json({status: 'success', message: 'User Profile read'});
-    }catch(err) {
-        res.status(500).json({status: 'error', message: err.message});
-    }
+// Upload Single Image
+export const UploadSingleImage = async (req, res) => {
+    const result = await UploadSingleImageService(req, res);
+    res.json(result);
 }
 
-export const UpdateUserProfile = async (req, res) => {
-    try {
-        res.status(200).json({status: 'success', message: 'User Profile update'});
-    }catch(err) {
-        res.status(500).json({status: 'error', message: err.message});
-    }
+// Read File
+export const ReadFile = async (req, res) => {
+    const result = await ReadFileService(req, res);
+    res.json(result);
+}
+
+// Delete Singe File
+export const DeleteSingleFile = async (req, res) => {
+    const result = await DeleteSingleFileService(req, res);
+    res.json(result);
 }
